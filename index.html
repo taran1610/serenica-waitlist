@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Join the Serenica waitlist - Science-backed self care for mental wellness">
+    <title>Serenica - Join the Waitlist</title>
+    
+    <!-- Google Analytics -->
+    <!-- REPLACE 'G-XXXXXXXXXX' WITH YOUR MEASUREMENT ID -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX');
+    </script>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: linear-gradient(135deg, #FFF8F0 0%, #F5E6D8 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            color: #2C3E50;
+        }
+
+        .container {
+            max-width: 1200px;
+            width: 100%;
+            text-align: center;
+            animation: fadeIn 0.8s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            margin-bottom: 60px;
+            margin-top: 40px;
+        }
+
+        .logo-icon {
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, #89CFF0 0%, #6FB8D9 100%);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+        }
+
+        .logo-text {
+            font-size: 32px;
+            font-weight: 700;
+            color: #2C3E50;
+        }
+
+        h1 {
+            font-size: 64px;
+            font-weight: 700;
+            color: #2C3E50;
+            margin-bottom: 24px;
+            line-height: 1.1;
+        }
+
+        .tagline {
+            font-size: 22px;
+            color: #5A6C7D;
+            margin-bottom: 16px;
+            font-weight: 500;
+        }
+
+        .subtitle {
+            font-size: 20px;
+            color: #7B8A99;
+            margin-bottom: 48px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.6;
+        }
+
+        .waitlist-form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 12px;
+        }
+
+        .input-wrapper {
+            position: relative;
+            width: 100%;
+            max-width: 420px;
+        }
+
+        input[type="email"] {
+            width: 100%;
+            padding: 18px 24px;
+            font-size: 16px;
+            border: 2px solid #E0E7ED;
+            border-radius: 16px;
+            background: white;
+            transition: all 0.3s ease;
+            font-family: 'Inter', sans-serif;
+        }
+
+        input[type="email"]:focus {
+            outline: none;
+            border-color: #89CFF0;
+            box-shadow: 0 0 0 4px rgba(137, 207, 240, 0.1);
+        }
+
+        input[type="email"]:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+
+        .join-button {
+            width: 100%;
+            max-width: 420px;
+            padding: 18px 48px;
+            font-size: 18px;
+            font-weight: 600;
+            color: white;
+            background: linear-gradient(135deg, #89CFF0 0%, #6FB8D9 100%);
+            border: none;
+            border-radius: 16px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: 'Inter', sans-serif;
+            box-shadow: 0 4px 14px rgba(137, 207, 240, 0.4);
+        }
+
+        .join-button:hover:not(:disabled) {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(137, 207, 240, 0.5);
+        }
+
+        .join-button:active:not(:disabled) {
+            transform: translateY(0);
+        }
+
+        .join-button:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+
+        .message {
+            max-width: 420px;
+            margin: 0 auto 20px;
+            padding: 16px 24px;
+            border-radius: 12px;
+            font-weight: 500;
+            display: none;
+            animation: slideDown 0.4s ease-out;
+        }
+
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .message.show {
+            display: block;
+        }
+
+        .message.success {
+            background: #D4EDDA;
+            color: #155724;
+            border: 1px solid #C3E6CB;
+        }
+
+        .message.error {
+            background: #F8D7DA;
+            color: #721C24;
+            border: 1px solid #F5C6CB;
+        }
+
+        .perks {
+            font-size: 14px;
+            color: #8B9DAD;
+            margin-bottom: 60px;
+        }
+
+        .mockup-container {
+            margin-top: 40px;
+            position: relative;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .mockup-image {
+            max-width: 700px;
+            width: 100%;
+            height: auto;
+            border-radius: 32px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+        }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 42px; }
+            .tagline { font-size: 18px; }
+            .subtitle { font-size: 16px; }
+            .mockup-image { max-width: 100%; }
+            .logo { margin-bottom: 40px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <div class="logo-icon">🧘</div>
+            <div class="logo-text">Serenica</div>
+        </div>
+
+        <h1>Meet Serenica</h1>
+        
+        <p class="tagline">Science-backed self care, made warm and welcoming</p>
+        
+        <p class="subtitle">Serenica helps you reflect, reset, and regain control — daily. Track your emotions, journal your thoughts, and discover patterns in your mental wellness journey.</p>
+
+        <div id="message" class="message"></div>
+
+        <form class="waitlist-form" id="waitlistForm">
+            <div class="input-wrapper">
+                <input 
+                    type="email" 
+                    id="emailInput" 
+                    placeholder="Enter your email" 
+                    required
+                >
+            </div>
+            <button type="submit" class="join-button" id="submitButton">
+                Join Waitlist
+            </button>
+        </form>
+
+        <p class="perks">Early access • Exclusive features • Launch perks</p>
+
+        <div class="mockup-container">
+            <svg class="mockup-image" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <filter id="shadow">
+                        <feDropShadow dx="0" dy="10" stdDeviation="20" flood-opacity="0.15"/>
+                    </filter>
+                </defs>
+                
+                <rect x="250" y="50" width="300" height="500" rx="30" fill="#1F2937" filter="url(#shadow)"/>
+                <rect x="260" y="60" width="280" height="480" rx="25" fill="#F8FAFC"/>
+                
+                <rect x="270" y="70" width="260" height="30" rx="15" fill="#E2E8F0"/>
+                <text x="295" y="90" font-family="Inter" font-size="12" fill="#64748B">9:41</text>
+                <circle cx="510" cy="85" r="4" fill="#10B981"/>
+                
+                <text x="290" y="140" font-family="Inter" font-size="24" font-weight="700" fill="#1E293B">Welcome Back</text>
+                <text x="290" y="165" font-family="Inter" font-size="13" fill="#64748B">Here's your mental wellness overview</text>
+                
+                <rect x="280" y="185" width="110" height="70" rx="12" fill="white" stroke="#E2E8F0" stroke-width="1"/>
+                <text x="290" y="205" font-family="Inter" font-size="11" fill="#64748B">Current Streak</text>
+                <text x="290" y="235" font-family="Inter" font-size="24" font-weight="700" fill="#1E293B">7 days</text>
+                
+                <rect x="400" y="185" width="130" height="70" rx="12" fill="white" stroke="#E2E8F0" stroke-width="1"/>
+                <text x="410" y="205" font-family="Inter" font-size="11" fill="#64748B">Avg. Mood</text>
+                <text x="410" y="235" font-family="Inter" font-size="24" font-weight="700" fill="#10B981">8.5/10</text>
+                
+                <rect x="280" y="270" width="240" height="150" rx="12" fill="white" stroke="#E2E8F0" stroke-width="1"/>
+                <text x="295" y="295" font-family="Inter" font-size="14" font-weight="600" fill="#1E293B">Weekly Mood Trend</text>
+                
+                <polyline points="295,380 320,360 345,370 370,340 395,350 420,330 445,345 470,325" 
+                          fill="none" stroke="#89CFF0" stroke-width="3" stroke-linecap="round"/>
+                <circle cx="295" cy="380" r="4" fill="#6FB8D9"/>
+                <circle cx="470" cy="325" r="4" fill="#6FB8D9"/>
+                
+                <rect x="280" y="440" width="240" height="55" rx="14" fill="#89CFF0"/>
+                <text x="340" y="472" font-family="Inter" font-size="16" font-weight="600" fill="white">New Entry</text>
+                
+                <circle cx="150" cy="100" r="40" fill="#FFE4E1" opacity="0.5"/>
+                <circle cx="650" cy="450" r="50" fill="#E6F3FF" opacity="0.5"/>
+                <circle cx="680" cy="150" r="30" fill="#F0E6FF" opacity="0.5"/>
+            </svg>
+        </div>
+    </div>
+
+    <script>
+        const form = document.getElementById('waitlistForm');
+        const emailInput = document.getElementById('emailInput');
+        const submitButton = document.getElementById('submitButton');
+        const messageDiv = document.getElementById('message');
+
+        function showMessage(text, type) {
+            messageDiv.textContent = text;
+            messageDiv.className = `message ${type} show`;
+            
+            setTimeout(() => {
+                messageDiv.classList.remove('show');
+            }, 5000);
+        }
+
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            const email = emailInput.value.trim().toLowerCase();
+            
+            if (!email) return;
+
+            submitButton.disabled = true;
+            emailInput.disabled = true;
+            submitButton.textContent = 'Joining...';
+
+            try {
+                const response = await fetch('/api/subscribe', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ email }),
+                });
+
+                const data = await response.json();
+
+                if (response.ok) {
+                    showMessage('🎉 ' + data.message, 'success');
+                    emailInput.value = '';
+                    
+                    if (typeof gtag !== 'undefined') {
+                        gtag('event', 'signup', {
+                            'event_category': 'Waitlist',
+                            'event_label': 'Email Signup Success'
+                        });
+                    }
+                } else {
+                    showMessage(data.error || 'Something went wrong. Please try again.', 'error');
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                showMessage('Network error. Please check your connection and try again.', 'error');
+            } finally {
+                submitButton.disabled = false;
+                emailInput.disabled = false;
+                submitButton.textContent = 'Join Waitlist';
+            }
+        });
+    </script>
+</body>
+</html>
