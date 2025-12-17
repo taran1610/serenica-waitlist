@@ -1,0 +1,9 @@
+{
+  "name": "serenica-waitlist",
+  "version": "1.0.0",
+  "description": "Serenica waitlist landing page",
+  "type": "module",
+  "dependencies": {
+    "@supabase/supabase-js": "^2.39.0"
+  }
+}
