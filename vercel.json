@@ -1,9 +1,4 @@
 {
-  "functions": {
-    "api/subscribe.js": {
-      "runtime": "nodejs18.x"
-    }
-  },
   "headers": [
     {
       "source": "/api/(.*)",
