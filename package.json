@@ -1,5 +1,6 @@
 {
   "name": "serenica-waitlist",
   "version": "1.0.0",
-  "description": "Serenica waitlist landing page"
+  "description": "Serenica waitlist landing page",
+  "type": "module"
 }
