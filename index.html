@@ -5,17 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Join the Serenica waitlist - Science-backed self care for mental wellness">
     <title>Serenica - Join the Waitlist</title>
-    
-    <!-- Google Analytics -->
-    <!-- REPLACE 'G-XXXXXXXXXX' WITH YOUR MEASUREMENT ID -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-XXXXXXXXXX');
-    </script>
-    
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         * {
@@ -297,72 +286,4 @@
                 <rect x="280" y="440" width="240" height="55" rx="14" fill="#89CFF0"/>
                 <text x="340" y="472" font-family="Inter" font-size="16" font-weight="600" fill="white">New Entry</text>
                 
-                <circle cx="150" cy="100" r="40" fill="#FFE4E1" opacity="0.5"/>
-                <circle cx="650" cy="450" r="50" fill="#E6F3FF" opacity="0.5"/>
-                <circle cx="680" cy="150" r="30" fill="#F0E6FF" opacity="0.5"/>
-            </svg>
-        </div>
-    </div>
-
-    <script>
-        const form = document.getElementById('waitlistForm');
-        const emailInput = document.getElementById('emailInput');
-        const submitButton = document.getElementById('submitButton');
-        const messageDiv = document.getElementById('message');
-
-        function showMessage(text, type) {
-            messageDiv.textContent = text;
-            messageDiv.className = `message ${type} show`;
-            
-            setTimeout(() => {
-                messageDiv.classList.remove('show');
-            }, 5000);
-        }
-
-        form.addEventListener('submit', async (e) => {
-            e.preventDefault();
-            
-            const email = emailInput.value.trim().toLowerCase();
-            
-            if (!email) return;
-
-            submitButton.disabled = true;
-            emailInput.disabled = true;
-            submitButton.textContent = 'Joining...';
-
-            try {
-                const response = await fetch('/api/subscribe', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify({ email }),
-                });
-
-                const data = await response.json();
-
-                if (response.ok) {
-                    showMessage('🎉 ' + data.message, 'success');
-                    emailInput.value = '';
-                    
-                    if (typeof gtag !== 'undefined') {
-                        gtag('event', 'signup', {
-                            'event_category': 'Waitlist',
-                            'event_label': 'Email Signup Success'
-                        });
-                    }
-                } else {
-                    showMessage(data.error || 'Something went wrong. Please try again.', 'error');
-                }
-            } catch (error) {
-                console.error('Error:', error);
-                showMessage('Network error. Please check your connection and try again.', 'error');
-            } finally {
-                submitButton.disabled = false;
-                emailInput.disabled = false;
-                submitButton.textContent = 'Join Waitlist';
-            }
-        });
-    </script>
-</body>
-</html>
+                <circle cx="150" cy="100" r="40" fill="#FFE4E1"
